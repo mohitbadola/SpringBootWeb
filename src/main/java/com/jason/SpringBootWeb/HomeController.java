@@ -13,14 +13,14 @@ public class HomeController {
     @RequestMapping("/")
     public String home(){
 //        System.out.println("home method called");
-        return "index.jsp";
+        return "index";
     }
 
     @RequestMapping("add")
     public String add(@RequestParam("num1") int num1, @RequestParam("num2") int num2, Model model){
         int result = num1 + num2;
         model.addAttribute("result", result);
-        return "result.jsp";
+        return "result";
     }
 
 }
