@@ -1,0 +1,145 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6; /* Lighter grey background for better contrast */
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    margin: 0; /* Remove default margin */
+}
+
+/* Heading (h2) styling */
+h2 {
+    color: #4a90e2; /* Updated to a soft blue color */
+    margin-bottom: 30px;
+    font-size: 28px; /* Increased font size for better visibility */
+}
+
+/* Form container styling */
+form {
+    background-color: #ffffff; /* Pure white background for contrast */
+    padding: 30px;
+    border-radius: 8px; /* Increased border radius for smoother corners */
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a cleaner look */
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Input fields and button styling */
+input[type="text"], input[type="submit"] {
+    border: 1px solid #d1d5db; /* Softer grey border */
+    border-radius: 6px; /* Slightly more rounded corners */
+    padding: 12px 15px;
+    margin: 12px 0;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Text input field styling */
+input[type="text"] {
+    background-color: #f9fafb; /* Slightly off-white background */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #4a90e2; /* Soft blue color */
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transform transition */
+    position: relative; /* For ripple effect positioning */
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #357ab8; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lifting effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Submit button focus effect */
+input[type="submit"]:focus {
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); /* Blue glow on focus */
+}
+
+/* Label styling */
+label {
+    font-size: 18px;
+    color: #4a90e2; /* Matching soft blue color */
+    font-weight: normal;
+    margin: 15px 0 5px;
+    display: block; /* Consistent label display */
+}
+
+/* Ripple effect for button click */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Ripple effect on button */
+input[type="submit"]::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+}
+
+/* Active ripple effect */
+input[type="submit"]:active::after {
+    transform: scale(0, 0);
+    opacity: 0.2;
+    transition: 0s;
+}
+
+/* Paragraph styling */
+p {
+    color: #333;
+    font-size: 20px; /* Adjusted font size for better readability */
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Result container styling */
+.result-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px; /* Consistent border radius */
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for result container */
+.result-container:hover {
+    transform: translateY(-2px); /* Slight lifting effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+

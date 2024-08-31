@@ -1,6 +1,9 @@
 <%@page language = "java"%>
 
 <html>
+    <head>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+    </head>
     <body>
         <h2>Jason Calculator!!!</h2>
         <form action = "add">
