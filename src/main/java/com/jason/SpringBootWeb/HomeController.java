@@ -12,6 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
+    @ModelAttribute("course")
+    public String courseName(){
+        return "Java";
+    }
+
     @RequestMapping("/")
     public String home(){
 //        System.out.println("home method called");
@@ -28,7 +33,7 @@ public class HomeController {
     }
 
     @RequestMapping("addUser")
-    public String add(@ModelAttribute("user1") User user){
+    public String add(User user){
         return "result";
     }
 
