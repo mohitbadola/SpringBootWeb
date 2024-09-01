@@ -28,7 +28,7 @@ public class HomeController {
     }
 
     @RequestMapping("addUser")
-    public String add(@ModelAttribute User user){
+    public String add(@ModelAttribute("user1") User user){
         return "result";
     }
 
