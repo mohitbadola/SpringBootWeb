@@ -16,11 +16,23 @@ public class HomeController {
 //        System.out.println("home method called");
         return "index";
     }
-
     @RequestMapping("add")
-    public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2, ModelAndView mv){
+    public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2, ModelAndView mv) {
+
         int result = num1 + num2;
-        mv.addObject("result", result);
+        mv.addObject("result",result);
+        mv.setViewName("result");
+
+        return mv;
+    }
+
+    @RequestMapping("addUser")
+    public ModelAndView add(@RequestParam("uid") int uid, @RequestParam("uname") String uname, ModelAndView mv){
+
+        User user = new User();
+        user.setUid(uid);
+        user.setUname(uname);
+        mv.addObject("user", user);
         mv.setViewName("result");
         return mv;
     }

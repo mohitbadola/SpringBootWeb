@@ -5,7 +5,8 @@
     <link rel="stylesheet" type = "text/css" href="style.css">
     </head>
     <body>
+    <h2>Welcome to Calculator</h2>
      <!--  using jstl tags -->
-        <h2>Result is : ${result}</h2>
+        <p>Result is : ${user}</p>
     </body>
 </html>
