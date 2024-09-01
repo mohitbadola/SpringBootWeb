@@ -7,6 +7,7 @@
     <body>
     <h2>Welcome to Calculator</h2>
      <!--  using jstl tags -->
+        <p>${result}</p>
         <p>${user}</p>
         <p>Welcome to the ${course} world!</p>
     </body>

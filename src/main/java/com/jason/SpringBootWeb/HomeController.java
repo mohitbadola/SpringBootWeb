@@ -22,6 +22,7 @@ public class HomeController {
 //        System.out.println("home method called");
         return "index";
     }
+
     @RequestMapping("add")
     public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2, ModelAndView mv) {
 
